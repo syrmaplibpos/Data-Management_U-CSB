@@ -67,3 +67,5 @@ include or not include the ( , , )
 * LIKE and ILIKE
 
 using pattern matching
+
+
