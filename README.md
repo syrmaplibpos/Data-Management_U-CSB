@@ -42,3 +42,28 @@ ORDER BY payment_date DESC
 LIMIT 5;
 
 
+* BETWEEN, NOT BETWEEN
+
+the same as
+
+value >= low AND value <= high
+value BETWEEN low AND high
+
+include boundary
+
+value < low OR value > high
+value NOT BETWEEN low AND high
+
+dates
+YYYY-MM-DD
+
+BETWEEN 2000-02-18 AND 2000-02-20
+include any time between 02-18 00:00:00 and 02-20 00:00:00
+
+* IN, NOT IN
+
+include or not include the ( , , )
+
+* LIKE and ILIKE
+
+using pattern matching
