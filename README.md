@@ -13,6 +13,7 @@ Based on The Complete Sql Bootcamp on Udemy
     - [BETWEEN, NOT BETWEEN](#between-not-between)
     - [IN, NOT IN](#in-not-in)
     - [LIKE and ILIKE](#like-and-ilike)
+  - [GROUP BY](#group-by)
 
 
 ## SQL Fundamentals 
@@ -82,7 +83,7 @@ LIKE is case-sensitive, ILIKE is case-insensitive
 
 using pattern matching
 
-replace the rest with %
+replace the rest with % (can be nothing)
 
 all names that begin with an 'A' or end with 'a'
 
@@ -99,4 +100,11 @@ WHERE title LIKE 'Mission Impossible _'
 Can use multiple underscores 
 
 WHERE value LIKE 'version#__'
+
+also can work with NOT LIKE or NOT ILIKE
+
+
+
+
+## GROUP BY
 
