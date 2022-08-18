@@ -128,7 +128,11 @@ SELECT MAX(replacement_cost) FROM film;
 SELECT ROUND(AVG(replacement_cost),2) FROM film;
 
 
+<img src="GROUP_BY.png" alt="GROUP_BY" width="1000"/>
+
 <img src="GROUP_BY-sum.jpeg" alt="GROUP_BY-sum" width="1000"/>
+
+
 
 
 1. choose categorical column
