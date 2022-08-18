@@ -14,6 +14,7 @@ Based on The Complete Sql Bootcamp on Udemy
     - [IN, NOT IN](#in-not-in)
     - [LIKE and ILIKE](#like-and-ilike)
   - [GROUP BY](#group-by)
+    - [Aggregate Functions](#aggregate-functions)
 
 
 ## SQL Fundamentals 
@@ -107,4 +108,55 @@ also can work with NOT LIKE or NOT ILIKE
 
 
 ## GROUP BY
+
+### Aggregate Functions
+
+take multiple inputs and return a single output
+
+AVG(), COUNT(), MAX(), MIN(), SUM()
+
+happen only in SELECT or HAVING clause
+
+Special notes
+
+* AVG() only returns a floating point value, use ROUND() to specify precision after the decimal
+
+* Convention: just use COUNT(*)
+
+SELECT MAX(replacement_cost) FROM film;
+
+SELECT ROUND(AVG(replacement_cost),2) FROM film;
+
+
+<img src="GROUP_BY-sum.jpeg" alt="GROUP_BY-sum" width="1000"/>
+
+
+1. choose categorical column
+
+2. not continuous
+
+3. can be numeric
+
+
+SELECT category_col, AGG(data_col) FROM table
+
+WHERE category_col != 'A'
+
+GROUP BY category_col
+
+
+* the GROUP BY clause must appear right after FROM statement or WHERE statement
+
+* in the SELECT statement, columns must either have an aggregate function or be in the GROUP BY call
+
+* WHERE statement should not refer to the aggregation result, it filter before GROUP BY, HAVING is used to filter result.
+
+ORDER BY AGG(data_col)
+
+* used after GROUP BY, (same as LIMIT)
+
+* sort results based on the aggregate, refer to the entire function
+
+
+
 
