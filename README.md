@@ -1,6 +1,6 @@
-# Database-Self-Study-Journey
+# Data-Management-Self-Study-Journey
 
-Based on [The Complete Sql Bootcamp](https://concordia.udemy.com/course/the-complete-sql-bootcamp/)
+Based on The Complete Sql Bootcamp on Udemy
 
 
 ## SQL Fundamentals 
