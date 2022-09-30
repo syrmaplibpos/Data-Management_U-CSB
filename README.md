@@ -17,6 +17,12 @@ Based on The Complete Sql Bootcamp on Udemy
     - [Aggregate Functions](#aggregate-functions)
     - [GROUP BY](#group-by-1)
     - [HAVING](#having)
+  - [Database Foundations](#database-foundations)
+    - [Relational database](#relational-database)
+    - [keys and unque values](#keys-and-unque-values)
+    - [Relationships](#relationships)
+    - [ACID and transactions](#acid-and-transactions)
+    - [basic sql](#basic-sql)
 
 
 ## SQL Fundamentals 
@@ -45,7 +51,7 @@ SELECT name,choice FROM table WHERE name = 'David' AND choice = 'red'
 
 ### ORDER BY
 
-SELECT comapny, name, sales FROM table ORDER BY company ASC, sales DESC
+SELECT company, name, sales FROM table ORDER BY company ASC, sales DESC
 
 default ASC
 
@@ -248,3 +254,129 @@ WHERE staff_id = 2
 GROUP BY customer_id, staff_id
 
 HAVING SUM(amount) > 100;
+
+
+
+
+## Database Foundations
+
+
+### Relational database
+
+rows: instances of a given entity
+
+columns: attributes of each entity
+
+
+table are made of rows, which present instances of a given entity
+
+and columns, which represent attributes of each entity
+
+the set of columns is called a relation
+
+
+customer = entity
+
+each individual customer = an instance of a customer
+
+customers share common attributes, but their data of attributeis are different from each other
+
+
+### keys and unque values
+
+unique value can be used as keys 
+
+key is the value that we can use to refer to only one specific row or record
+
+**primary key:**
+
+a primary key is the most important key in a table, they can be others as well
+
+we can do this by adding a column to a table, and setting that column to require a uniqle value.
+
+**composite key:**
+
+if may not be able to modify a table, we may use two or more field in the data to act as a key
+
+two or more field taken together to act as a uniqle identifier
+
+**foreign key:**
+
+this is what a primary key from one tables is called when it is referenced in another table
+
+that is important when we start to build relationships between tables to associate one record with others
+
+
+### Relationships
+
+one to many 
+
+<img src="one_to_many.PNG" alt="one to many" width="600" height="360" class="center">
+
+this associates one records in one table with multiple records in another table
+
+many to many
+
+<img src="many_to_many.PNG" alt="many to many" width="600" height="360" class="center">
+
+creating a linking table, that contains column for the foreign key from the table we are associating 
+
+used to keep record of each dish that each customer has ordered 
+
+one to one
+
+<img src="one_to_one.PNG" alt="one to one" width="600" height="360" class="center">
+
+associate only one record in one table with only one record in another table
+
+such that the targeted record cannot be associated with another record at the same time
+
+
+### ACID and transactions
+
+Transactions is a set of operations that must be all completed
+
+and if for some reason, any of the individual operations are not completed
+
+no changes are made to the database, anything that partially done will be undone
+
+ACID principle
+
+atomic: the transaction is indivisible, that pieces of it cannot be separated out.
+
+consistent: whatever the transaction does, it needs to leave the database in valid and consistent state
+
+isolated: while the activities in the transaction are being completed, nothing else can make changes to the data involved 
+
+durable: the information we change in the transaction actually get written to the database
+
+when the transaction is reported as complete, the data is there, the change has been made, 
+
+tell the system when code that we are doing transaction
+
+### basic sql
+
+interact with data 
+
+creating or modifying tables, and controlling access to tables
+
+statements called queries
+
+clause = expression + predicates + key word
+
+expression + predicates set parameters within which to operate
+
+SELECT field_name_1, field_name_2 FROM table_name;
+
+
+create, read, update and delete are called CRUD
+
+
+
+
+
+
+
+
+
+
