@@ -10,7 +10,7 @@ Write an SQL query to report all customers who never order anything.
 
 use WHERE to subquery and quote that result to in the main query
 
-**not in**
+**NOT IN**
 
 Using sub-query and NOT IN clause
 
@@ -24,7 +24,7 @@ WHERE customers.id NOT IN
 
 1873. Calculate Special Bonus
 
-*case when*
+*CASE WHEN*
 
 CASE WHEN
     THEN
@@ -33,7 +33,7 @@ ELSE
 
 use it like if else
 
-**as**
+**AS**
 
 AS alias name, only exist in current query, use "" if their is a space in the name
 
