@@ -2,6 +2,7 @@
 
 caution the NULL value, to detect, use IS NULL
 
+
 183. Customers Who Never Order
 
 Write an SQL query to report all customers who never order anything.
@@ -45,3 +46,5 @@ select employee_id,(case
 			 ) AS bonus 
 			 FROM Employees 
 			 ORDER BY employee_id ;
+
+
