@@ -32,6 +32,11 @@ CASE WHEN
 ELSE
     END
 
+CASE WHEN condition THEN result
+     [WHEN ...]
+     [ELSE result]
+END
+
 use it like if else
 
 **AS**
@@ -39,12 +44,64 @@ use it like if else
 AS alias name, only exist in current query, use "" if their is a space in the name
 
 
-select employee_id,(case 
- when employee_id %2 !=0 AND name NOT LIKE'M%' 
+SELECT employee_id,(CASE 
+ WHEN employee_id %2 !=0 AND name NOT LIKE'M%' 
 			  THEN salary
  ELSE 0 END
 			 ) AS bonus 
 			 FROM Employees 
 			 ORDER BY employee_id ;
 
+
+627. Swap Salary
+
+Write an SQL query to swap all 'f' and 'm' values (i.e., change all 'f' values to 'm' and vice versa) with a single update statement and no intermediate temporary tables.
+
+Note that you must write a single update statement, do not write any select statement for this problem.
+
+**IF(condition_1, operation, else_operation)**
+
+UPDATE salary set sex = if(sex = 'm','f','m');
+
+**CASE WHEN condition THEN result [WHEN ...][ELSE result]END**
+
+UPDATE salary SET sex = CASE sex WHEN 'm' THEN 'f' ELSE 'm' END;
+
+
+196. Delete Duplicate Emails
+
+Write an SQL query to delete all the duplicate emails, keeping only one unique email with the smallest id. Note that you are supposed to write a DELETE statement and not a SELECT one.
+
+After running your script, the answer shown is the Person table. The driver will first compile and run your piece of code and then show the Person table. The final order of the Person table does not matter.
+
+DELETE p1 FROM Person p1,
+    Person p2
+WHERE
+    p1.Email = p2.Email AND p1.Id > p2.Id
+
+SELECT p1.*
+FROM Person p1,
+    Person p2
+WHERE
+    p1.Email = p2.Email
+;
+
+SELECT p1.*
+FROM Person p1,
+    Person p2
+WHERE
+    p1.Email = p2.Email AND p1.Id > p2.Id
+;
+
+
+**UPDATE**
+
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+
+**DELETE**
+
+DELETE FROM table_name WHERE condition;
 
