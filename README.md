@@ -311,13 +311,13 @@ that is important when we start to build relationships between tables to associa
 
 one to many 
 
-<img src="one_to_many.PNG" alt="one to many" width="600" height="360" class="center"/>
+<img src="one_to_many.PNG" alt="one to many" width="600" height="360" />
 
 this associates one records in one table with multiple records in another table
 
 many to many
 
-<img src="many_to_many.PNG" alt="many to many" width="600" height="360" class="center"/>
+<img src="many_to_many.PNG" alt="many to many" width="600" height="360" />
 
 creating a linking table, that contains column for the foreign key from the table we are associating 
 
@@ -325,7 +325,7 @@ used to keep record of each dish that each customer has ordered
 
 one to one
 
-<img src="one_to_one.PNG" alt="one to one" width="600" height="360" class="center"/>
+<img src="one_to_one.PNG" alt="one to one" width="600" height="360" />
 
 associate only one record in one table with only one record in another table
 
